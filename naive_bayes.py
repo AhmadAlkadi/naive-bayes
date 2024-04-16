@@ -55,7 +55,7 @@ clf = clf.fit(x_training, y_training)
 #to calculate the % difference between the prediction and the real output values use: 100*(|predicted_value - real_value|)/real_value))
 #--> add your Python code here
 count =0
-for (real_value,predicted_value) in zip(clf.predict(x_test),y_test):
+for (predicted_value,real_value) in zip(clf.predict(x_test),y_test):
     percentage_difference = 100*(abs(predicted_value - real_value)/real_value)
     if(percentage_difference<=15):
         count+=1
